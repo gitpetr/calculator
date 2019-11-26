@@ -3,9 +3,8 @@ import java.util.Arrays;
 
 public class Is_valid {
     public static Boolean inputString(String str) {
-        str = str.trim();
-        String[] splitStr = str.split(" ");
-        return is_validArray(splitStr);
+        String[] string = NormaliseInput.stringToArray(str);
+        return is_validArray(string);
     }
 
     public static Boolean action(String act) {

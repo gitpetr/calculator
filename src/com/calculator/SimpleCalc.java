@@ -1,7 +1,7 @@
 package com.calculator;
 
 public class SimpleCalc {
-    public int calc(int a, String action, int b) {
+    protected int calc(int a, String action, int b) {
         int result;
 
         switch (action) {

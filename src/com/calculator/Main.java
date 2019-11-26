@@ -38,8 +38,6 @@ public class Main {
             System.out.println("Ошибка: " + e.getMessage());
         }
 
-
-
         if (isValidArabic) {
             SimpleCalc sCalc = new SimpleCalc();
 
