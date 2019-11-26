@@ -5,20 +5,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	    Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите через пробел: число арифметическое_действие число (в диапазоне от 1 до 10 включительно) \n и нажмите Enter");
         String[] calcArr = new String[3];
-//        Boolean isValidString;
         Boolean isValidArabic = false;
         Boolean isValidRoman = false;
+	    Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите через пробел: число арифметическое_действие число" +
+                           "(в диапазоне от 1 до 10 включительно ) \n и нажмите Enter");
 
         print(scanner, calcArr, isValidArabic, isValidRoman);
-
-
-
     }
 
-    public static void print(Scanner scanner, String[] calcArr, Boolean isValidArabic, Boolean isValidRoman) {
+    private static void print(Scanner scanner, String[] calcArr, Boolean isValidArabic, Boolean isValidRoman) {
         try {
             String calcStr = scanner.nextLine();
 
@@ -26,7 +24,7 @@ public class Main {
                 throw new InvalidInputException("Надо вводить число пробел знак пробел число");
             }
 
-            calcArr = NormaliseInput.normalize(calcStr);
+            calcArr = NormaliseInput.stringToArray(calcStr);
 
             if (!Is_valid.action(calcArr[1])) {
                 throw new Exception("Неправильно введен математический знак");

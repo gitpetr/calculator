@@ -9,7 +9,7 @@ public class SimpleCalc {
             case "-": result = a - b; break;
             case "*": result = a * b; break;
             case "/": result = a / b; break;
-            default: result = -1;
+            default: result = -10000;
         }
 
         return result;
