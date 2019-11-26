@@ -37,7 +37,6 @@ public class Main {
         catch (InvalidInputException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
-
         catch(Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
