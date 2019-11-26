@@ -27,7 +27,7 @@ public class Main {
             calcArr = NormaliseInput.stringToArray(calcStr);
 
             if (!Is_valid.action(calcArr[1])) {
-                throw new Exception("Неправильно введен математический знак");
+                throw new InvalidInputException("Неправильно введен математический знак");
             }
 
             isValidArabic = Is_valid.arabic(calcArr);
@@ -37,9 +37,7 @@ public class Main {
         catch (InvalidInputException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
-        catch(Exception e) {
-            System.out.println("Ошибка: " + e.getMessage());
-        }
+
 
 
         if (isValidArabic) {
@@ -58,12 +56,9 @@ public class Main {
         }
         else {
             try {
-                throw new Exception("Вводить надо либо оба числа арабские, либо оба числа римские в диапазоне от 1 до 10 включительно");
+                throw new InvalidInputException("Вводить надо либо оба числа арабские, либо оба числа римские в диапазоне от 1 до 10 включительно");
             }
             catch (InvalidInputException e) {
-                System.out.println("Ошибка: " + e.getMessage());
-            }
-            catch (Exception e) {
                 System.out.println("Ошибка: " + e.getMessage());
             }
 
