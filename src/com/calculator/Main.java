@@ -20,18 +20,18 @@ public class Main {
         try {
             String calcStr = scanner.nextLine();
 
-            if (!Is_valid.inputString(calcStr)) {
+            if (!IsValid.inputString(calcStr)) {
                 throw new InvalidInputException("Надо вводить число пробел знак пробел число");
             }
 
             calcArr = NormaliseInput.stringToArray(calcStr);
 
-            if (!Is_valid.action(calcArr[1])) {
+            if (!IsValid.action(calcArr[1])) {
                 throw new InvalidInputException("Неправильно введен математический знак");
             }
 
-            isValidArabic = Is_valid.arabic(calcArr);
-            isValidRoman = Is_valid.roman(calcArr);
+            isValidArabic = IsValid.arabic(calcArr);
+            isValidRoman = IsValid.roman(calcArr);
 
         }
         catch (InvalidInputException e) {
